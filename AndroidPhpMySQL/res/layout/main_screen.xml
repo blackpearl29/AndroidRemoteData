@@ -18,4 +18,11 @@
         android:text="Add New Products"
         android:layout_marginTop="25dip"/>
 
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Created by Jason Tsoumenis"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
 </LinearLayout>
