@@ -50,10 +50,10 @@ public class NewProductActivity extends Activity {
 		inputFmink = (EditText) findViewById(R.id.inputFmink);
 		inputMmink =(EditText) findViewById(R.id.inputMmink);
 	
-
+		
 		// Create button
 		Button btnCreateProduct = (Button) findViewById(R.id.btnCreateProduct);
-
+		Button btncancel = (Button) findViewById(R.id.btncancel);
 		// button click event
 		btnCreateProduct.setOnClickListener(new View.OnClickListener() {
 
@@ -61,6 +61,17 @@ public class NewProductActivity extends Activity {
 			public void onClick(View view) {
 				// creating new product in background thread
 				new CreateNewProduct().execute();
+			}
+		});
+		//cancel button return to main menu
+		btncancel.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View arg0) {
+				// TODO Auto-generated method stub
+				Intent i = new Intent(getApplicationContext(), MainScreenActivity.class);
+				startActivity(i);
+				
 			}
 		});
 	}
